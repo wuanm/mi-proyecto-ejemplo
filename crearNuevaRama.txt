@@ -1,0 +1,38 @@
+# 1. Ir a la carpeta del proyecto
+cd ruta/del/proyecto
+
+# 2. Verificar en qué rama estás (debe ser 'master' o 'main')
+git branch
+
+# 3. Guardar cualquier cambio pendiente
+git add .
+git commit -m "Último avance estable en master"
+
+# 4. Crear y cambiar a una nueva rama para probar cambios
+git checkout -b nombre-de-la-rama
+
+# 🎯 Aquí ya estás en una nueva línea de trabajo.
+# Todo lo que hagas NO afectará a master/main.
+
+# 5. Haz tus modificaciones, prueba cosas, etc.
+
+# 6. Guardar tus cambios normalmente
+git add .
+git commit -m "Cambios en nueva funcionalidad (en rama separada)"
+
+# 7. (Opcional) Subir la nueva rama a GitHub para respaldo
+git push -u origin nombre-de-la-rama
+
+# 8. Para volver a la rama estable
+git checkout master     # o git checkout main
+
+# ✅ Ahora estás en la versión que funciona.
+
+# 9. Si tu rama experimental funcionó, puedes unirla a master
+git checkout master
+git merge nombre-de-la-rama
+git push
+
+# 10. (Opcional) Borrar la rama si ya no se necesita
+git branch -d nombre-de-la-rama
+git push origin --delete nombre-de-la-rama

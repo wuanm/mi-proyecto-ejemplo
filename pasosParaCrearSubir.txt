@@ -1,0 +1,39 @@
+# 🚀 Crear y subir un proyecto nuevo a GitHub
+
+# 1. Crear carpeta y archivos
+mkdir mi-proyecto && cd mi-proyecto
+echo "# Mi Proyecto" > README.md
+echo "console.log('Hola mundo');" > index.js
+
+# 2. Inicializar Git
+git init
+
+# 3. Configurar usuario (una vez)
+git config --global user.name "Tu Nombre"
+git config --global user.email "tucorreo@ejemplo.com"
+
+# 4. Agregar archivos al staging
+git add .
+
+# 5. Hacer primer commit
+git commit -m "Primer commit"
+
+# 6. Renombrar rama a 'main'
+git branch -M main
+
+# 7. Crear repositorio vacío en GitHub (sin README/.gitignore)
+
+# 8. Conectar con GitHub (pega tu URL)
+git remote add origin https://github.com/usuario/repositorio.git
+
+# 9. Subir proyecto
+git push -u origin main
+
+
+
+ al hacer cambios
+---------------------
+git add .
+git commit -m "Descripción clara del cambio"
+git push
+
